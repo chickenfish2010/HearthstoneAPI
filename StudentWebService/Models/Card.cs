@@ -5,14 +5,12 @@ using System.Web;
 
 namespace CardWebService.Models
 {
-    public class Course
+    public class Card
     {
         public int Id { get; set; }
-        public string Title { get; set; }
-        public string Instructor { get; set; }
+        public string Name { get; set; }
 
         // Represents the N:M relationship
-        public ICollection<Card> Cards { get; set; }
-
+        //public ICollection<Course> Courses { get; set; }
     }
 }

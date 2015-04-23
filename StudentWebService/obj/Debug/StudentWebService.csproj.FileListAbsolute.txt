@@ -29,3 +29,29 @@ c:\users\fmccown\documents\visual studio 2012\Projects\StudentWebService\Student
 c:\users\fmccown\documents\visual studio 2012\Projects\StudentWebService\StudentWebService\bin\System.Web.WebPages.Razor.xml
 c:\users\fmccown\documents\visual studio 2012\Projects\StudentWebService\StudentWebService\obj\Debug\StudentWebService.dll
 c:\users\fmccown\documents\visual studio 2012\Projects\StudentWebService\StudentWebService\obj\Debug\StudentWebService.pdb
+C:\Users\acancie1\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\StudentWebService.dll
+C:\Users\acancie1\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\StudentWebService.pdb
+C:\Users\acancie1\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\Antlr3.Runtime.dll
+C:\Users\acancie1\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\EntityFramework.dll
+C:\Users\acancie1\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\acancie1\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\Newtonsoft.Json.dll
+C:\Users\acancie1\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\System.Web.Helpers.dll
+C:\Users\acancie1\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\System.Web.Mvc.dll
+C:\Users\acancie1\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\System.Web.Optimization.dll
+C:\Users\acancie1\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\System.Web.Providers.dll
+C:\Users\acancie1\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\System.Web.Razor.dll
+C:\Users\acancie1\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\System.Web.WebPages.Deployment.dll
+C:\Users\acancie1\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\System.Web.WebPages.dll
+C:\Users\acancie1\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\System.Web.WebPages.Razor.dll
+C:\Users\acancie1\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\WebGrease.dll
+C:\Users\acancie1\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\EntityFramework.xml
+C:\Users\acancie1\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\Newtonsoft.Json.xml
+C:\Users\acancie1\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\System.Web.Helpers.xml
+C:\Users\acancie1\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\System.Web.Mvc.xml
+C:\Users\acancie1\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\System.Web.Razor.xml
+C:\Users\acancie1\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\System.Web.WebPages.xml
+C:\Users\acancie1\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\System.Web.WebPages.Deployment.xml
+C:\Users\acancie1\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\System.Web.WebPages.Razor.xml
+C:\Users\acancie1\Desktop\GitHub\HearthstoneAPI\StudentWebService\obj\Debug\StudentWebService.csprojResolveAssemblyReference.cache
+C:\Users\acancie1\Desktop\GitHub\HearthstoneAPI\StudentWebService\obj\Debug\StudentWebService.dll
+C:\Users\acancie1\Desktop\GitHub\HearthstoneAPI\StudentWebService\obj\Debug\StudentWebService.pdb

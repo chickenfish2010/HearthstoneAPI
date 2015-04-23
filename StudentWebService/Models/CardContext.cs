@@ -19,6 +19,6 @@ namespace CardWebService.Models
 
         public DbSet<Card> Cards { get; set; }
 
-        public DbSet<Course> Courses { get; set; }
+        //public DbSet<Course> Courses { get; set; }
     }
 }

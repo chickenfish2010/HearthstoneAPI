@@ -10,8 +10,7 @@ namespace CardWebService.Models
         // List of Cards
         private List<Card> Cards = new List<Card>(new Card[]
 		{
-			new Card { Id = 1, Name = "Bob Smith", Gpa = 2.5f },
-            new Card { Id = 2, Name = "Sue White", Gpa = 3.0f }
+			
 		});
 
         public List<Card> GetAllCards()
