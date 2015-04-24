@@ -65,10 +65,14 @@ function getCards() {
         // On success, 'data' contains a list of Cards
         $.each(data, function (key, item) {
             // Display each Card
-            console.log(item.Id + ' ' + item.Name + ' ' + item.Gpa);
+            if (data != null) {
+                console.log(item.Id + ' ' + item.Name + ' ' + item.Gpa);
 
-            $('<li>' + item.Id + ' - ' + item.Name + ' GPA = ' +
-                item.Gpa + '</li>').appendTo($list);
+                $('<li>' + item.Id + ' - ' + item.Name + ' GPA = ' +
+                    item.Gpa + '</li>').appendTo($list);
+            } else {
+                console.log("Data was null");
+            }
         });
     })
     .fail(function (jqXHR, textStatus, err) {

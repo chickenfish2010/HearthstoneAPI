@@ -7,7 +7,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
-namespace CardWebService
+namespace StudentWebService
 {
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
     // visit http://go.microsoft.com/?LinkId=9394801
@@ -25,7 +25,7 @@ namespace CardWebService
 
             // Cause initializer's Seed method to execute when app starts up
             System.Data.Entity.Database.SetInitializer(
-                new CardWebService.Models.CardsContextInitializer());
+                new StudentWebService.Models.CardsContextInitializer());
 
         }
     }

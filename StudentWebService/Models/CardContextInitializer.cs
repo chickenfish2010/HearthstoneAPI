@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
-namespace CardWebService.Models
+namespace StudentWebService.Models
 {
     public class CardsContextInitializer : DropCreateDatabaseIfModelChanges<CardsContext>
     {

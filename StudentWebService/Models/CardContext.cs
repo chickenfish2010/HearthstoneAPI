@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity;
 
-namespace CardWebService.Models
+namespace StudentWebService.Models
 {
     public class CardsContext : DbContext
     {
@@ -11,7 +11,7 @@ namespace CardWebService.Models
         // code to the Application_Start method in your Global.asax file.
         // Note: this will destroy and re-create your database with every model change.
         // 
-        // System.Data.Entity.Database.SetInitializer(new System.Data.Entity.DropCreateDatabaseIfModelChanges<CardWebService.Models.CardsContext>());
+        // System.Data.Entity.Database.SetInitializer(new System.Data.Entity.DropCreateDatabaseIfModelChanges<StudentWebService.Models.CardsContext>());
 
         public CardsContext() : base("name=CardsContext")
         {

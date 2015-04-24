@@ -8,9 +8,9 @@ using System.Net;
 using System.Net.Http;
 using System.Web;
 using System.Web.Http;
-using CardWebService.Models;
+using StudentWebService.Models;
 
-namespace CardWebService.Controllers
+namespace StudentWebService.Controllers
 {
     public class CardController : ApiController
     {
@@ -19,7 +19,16 @@ namespace CardWebService.Controllers
         // GET api/Card
         public IEnumerable<Card> GetCards()
         {
-            return db.Cards.AsEnumerable();
+            CardRepository repo = new CardRepository();
+
+            if (db.Cards.Any())
+            {
+                return db.Cards.AsEnumerable();
+            }
+            else
+            {
+                return null;
+            }
         }
 
         // GET api/Card/5
@@ -37,7 +46,7 @@ namespace CardWebService.Controllers
         // PUT api/Card/5
         public HttpResponseMessage PutCard(int id, Card Card)
         {
-            if (ModelState.IsValid && id == Card.Id)
+            if (ModelState.IsValid && id.Equals(Card.Id))
             {
                 db.Entry(Card).State = EntityState.Modified;
 
