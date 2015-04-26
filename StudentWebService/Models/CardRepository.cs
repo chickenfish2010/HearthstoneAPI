@@ -14,32 +14,7 @@ namespace StudentWebService.Models
         
         public CardRepository()
         {
-            //string readText;
-            //string path = @"c:\GitHub\HearthStoneAPI\AllSets.json";
-
-            //if (File.Exists(path))
-            //{
-            //    readText = File.ReadAllText(path);
-            //    file = JObject.Parse(readText);
-            //    Console.WriteLine("Parsed File");
-            //}
-
-            //Console.WriteLine(file.ToString());
-
-            //// the contents of this if statement were borrowed heavily from:
-            ////http://www.newtonsoft.com/json/help/html/SerializingJSONFragments.htm
-            //if (file != null)
-            //{
-            //    IList<JToken> results = file["Basic"].Children().ToList();
-
-            //    Console.Write(results);
-
-            //    foreach (var card in results)
-            //    {
-            //        Card cardToAdd = JsonConvert.DeserializeObject<Card>(card.ToString());
-            //        Cards.Add(cardToAdd);
-            //    }
-            //}
+            
         }
 
         // List of Cards

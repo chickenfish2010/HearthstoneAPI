@@ -17,16 +17,16 @@ namespace StudentWebService.Models
         public string Text { get; set; }
         public string Faction { get; set; }
         public string Rarity { get; set; }
-        public int Cost { get; set; }
-        public int Attack { get; set; }
+        public int? Cost { get; set; }
+        public int? Attack { get; set; }
         public string Flavor { get; set; }
         public string Artist { get; set; }
-        public bool Collectible { get; set; }
+        public bool? Collectible { get; set; }
         public string HowToGetGold { get; set; }
-        public string Mechanics { get; set; }
+        public List<string> Mechanics { get; set; }
         public string PlayerClass { get; set; }
         public string HowToGet { get; set; }
-        public int Health { get; set; }
+        public int? Health { get; set; }
 
 
 
