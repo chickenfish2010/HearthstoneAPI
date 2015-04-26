@@ -15,10 +15,10 @@ function init() {
     $('#saveNewCard').click(function () {
 
         var stu = {
-            Id: $('#newStuId').val(),
-            Name: $('#newStuName').val(),
-            Attack: $('#newAttack').val(),
-            Health: $('#newHealth').val()
+            Id: $('#newCardId').val(),
+            Name: $('#newCardName').val(),
+            Attack: $('#newCardAttack').val(),
+            Health: $('#newCardHealth').val()
         };
 
         saveNewCard(stu);
