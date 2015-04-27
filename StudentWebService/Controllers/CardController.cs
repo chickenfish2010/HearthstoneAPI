@@ -6,6 +6,7 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Runtime.Remoting.Messaging;
 using System.Web;
 using System.Web.Http;
 using StudentWebService.Models;
@@ -32,15 +33,15 @@ namespace StudentWebService.Controllers
         }
 
         // GET api/Card/5
-        public Card GetCard(int id)
+        public Card GetCard(string id)
         {
-            Card Card = db.Cards.Find(id);
-            if (Card == null)
-            {
-                throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
-            }
-
-            return Card;
+            Card card = db.Cards.Find(id);
+            if (card == null)
+                {
+                    throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
+                }
+            
+            return card;
         }
 
         // PUT api/Card/5

@@ -4,17 +4,52 @@
     <ol id="CardList"></ol>
     <input type="button" value="Get All" id="getCards" />
 
+
     <h2>Set Single Card</h2>
-    <input type="text" id="stuId" placeholder="Card ID" />
+    <input type="text" id="stuId" placeholder="Card Name" />
+
+    <h2>Get Single Card</h2>
+    <input type="text" id="cardId" placeholder="Card ID" />
+
     <div id="Card"></div>
-    <input type="button" value="Get Card" id="getCard" />
+    <input type="button" value="Get Card" id="getCard"/>
+
+    <h2>Card By Attack</h2>
+    <input type="text" id="cardByAttack" placeholder="Attack"/>
+    <div id="AttackList"></div>
+    <input type="button" value="Search" id="getCardByAttack" />
+
+    <h2>Search by Attribute</h2>
+    <input type="text" id="searchTextId" placeholder="Keyword(s)"/>
+    <input type="button" value="Search by Card Text" id="textSearchBtn" />
+    <br />
+    <input type="text" id="searchCostId" placeholder="Mana cost" />
+    <input type="button" value="Search by Mana Cost" id="manaSearchBtn" />
+    <br />
+    <input type="text" id="searchAttackId" placeholder="Attack" />
+    <input type="button" value="Search by Attack" id="attackSearchBtn" />
+    <br />
+    <input type="text" id="searchHealthId" placeholder="Health" />
+    <input type="button" value="Search by Health" id="healthSearchBtn" />
+    <br />
+    
 
     <h2>Add New Card</h2>
-    <input type="text" id="newStuId" placeholder="Card ID" />
+    <input type="text" id="newCardId" placeholder="Card ID" />
     <br />
-    <input type="text" id="newStuName" placeholder="Name" />
+    <input type="text" id="newCardName" placeholder="Name" />
     <br />
-    <input type="text" id="newStuGpa" placeholder="GPA" />
-    <br />
+
+    <input type="text" id="newCardAttack" placeholder="Attack" />
+    <br/>
+    <input type="text" id="newCardHealth" placeholder="Health"/>
+    <br/>
+
+
     <input type="button" value="Save New Card" id="saveNewCard" />
+
+    <h2>Delete Card</h2>
+    <input type="text" id="deleteCardID" placeholder="Card ID" /> 
+    <br />
+    <input type="button" value="Delete Card" id="deleteCard"/>
 </div>

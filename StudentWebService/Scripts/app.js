@@ -15,14 +15,16 @@ function init() {
     $('#saveNewCard').click(function () {
 
         var stu = {
-            Id: $('#newStuId').val(),
-            Name: $('#newStuName').val(),
-            Gpa: $('#newStuGpa').val()
+            Id: $('#newCardId').val(),
+            Name: $('#newCardName').val(),
+            Attack: $('#newCardAttack').val(),
+            Health: $('#newCardHealth').val()
         };
 
         saveNewCard(stu);
     });
 }
+
 
 function saveNewCard(stu) {
     // POST request: Id=3&Name=Becky+Black&Gpa=4.0
@@ -68,8 +70,7 @@ function getCards() {
             if (data != null) {
                 console.log(item.Id + ' ' + item.Name + ' ' + item.Gpa);
 
-                $('<li>' + item.Id + ' - ' + item.Name + ' GPA = ' +
-                    item.Gpa + '</li>').appendTo($list);
+                $('<li>' + item.Id + ' - ' + item.Name + ', Mana Cost - ' + item.Cost + ', Attack - ' + item.Attack + ', Health - ' + item.Health + '</li>').appendTo($list);
             } else {
                 console.log("Data was null");
             }
