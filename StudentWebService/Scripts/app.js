@@ -6,9 +6,21 @@ function init() {
         getCards();
     });
 
+    $('#updateButton').click(function () {
+        //PUT a single card
+        var Id = $('#updateCardId');
+        //var card = {
+        //    Attack: $('#updateCardAttack').val(),
+        //    Health: $('#updateCardHealth').val(),
+        //    Cost: $('updateCardMana').val()
+        //};
+        //console.log("created name/card");
+        updateCard(Id);
+    });
+     
     $('#getCard').click(function () {
         // GET a single Card
-        var stuId = $('#stuId').val();
+        var stuId = $('#cardId').val();
         getCard(stuId);
     });
 
@@ -18,13 +30,52 @@ function init() {
             Id: $('#newCardId').val(),
             Name: $('#newCardName').val(),
             Attack: $('#newCardAttack').val(),
-            Health: $('#newCardHealth').val()
+            Health: $('#newCardHealth').val(),
+            Cost: $('#newCardMana').val()
         };
 
         saveNewCard(stu);
     });
+
+    $('#deleteCard').click(function () {
+        var cardId = $('#deleteCardID').val();
+        deleteCard(cardId);
+    })
 }
 
+function deleteCard(cardId)
+    {
+    $.ajax({
+        url: '/api/Card/' + cardId,
+        type: 'DELETE',
+        data: cardId,
+        success: function (result) {
+            console.log("Card removed.");
+
+            // Set some confirmation message
+        },
+        error: function (jqXHR, textStatus, err) {
+            $('#updateStatus').text('Error: ' + err);
+        }
+    });
+}
+
+function updateCard(id)
+{
+    $.ajax({
+        url: '/api/Card/' + id,
+        type: 'PUT',
+        data: id,
+        success: function (result) {
+            console.log("Card updated.");
+
+            // Set some confirmation message
+        },
+        error: function (jqXHR, textStatus, err) {
+            $('#updateStatus').text('Error: ' + err);
+        }
+    });
+}
 
 function saveNewCard(stu) {
     // POST request: Id=3&Name=Becky+Black&Gpa=4.0
@@ -50,8 +101,7 @@ function getCard(id) {
         // Display Card with ID 
         console.log(data.Id + ' ' + data.Name + ' ' + data.Gpa);
 
-        $('#Card').html(data.Id + ' - ' + data.Name + ' GPA = '
-            + data.Gpa);
+        $('#Card').html(data.Id + ' - ' + data.Name + ', Mana Cost - ' + data.Cost +', Attack - ' + data.Attack + ', Health - ' + data.Health);
     })
     .fail(function (jqXHR, textStatus, err) {
         alert('Error: ' + err);
