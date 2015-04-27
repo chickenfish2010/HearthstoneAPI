@@ -62,15 +62,34 @@ function getCard(id) {
 function getCards() {
     var $list = $('#CardList');
 
+    $('#CardList').html("");
+
     $.getJSON('api/Card')
     .done(function (data) {
         // On success, 'data' contains a list of Cards
         $.each(data, function (key, item) {
             // Display each Card
             if (data != null) {
-                console.log(item.Id + ' ' + item.Name + ' ' + item.Gpa);
+                //console.log(item.Id + ' ' + item.Name + ' ' + item.Gpa);
+                var string = '<li>' + item.Id + ' - <b>' + item.Name + ' - ' + (item.Cost || '');
 
-                $('<li>' + item.Id + ' - ' + item.Name + ', Mana Cost - ' + item.Cost + ', Attack - ' + item.Attack + ', Health - ' + item.Health + '</li>').appendTo($list);
+                if (item.Cost != null)
+                {
+                    tempString = ', ' + 'Mana Cost - ' + item.Cost;
+                }
+                string += tempString;
+                if (item.Attack != null) {
+                    tempString =', ' + 'Attack - ' + item.Attack;
+                }
+                string += tempString;
+                if (item.Health != null) {
+                    tempString = ', ' + 'Health - ' + item.Health;
+                }
+                string += tempString + '</b>';
+
+                console.log(string);
+                $(string).appendTo($list);
+                //$('<li>' + item.Id + ' - ' + item.Name + ', Mana Cost - ' + item.Cost + ', Attack - ' + item.Attack + ', Health - ' + item.Health + '</li>').appendTo($list);
             } else {
                 console.log("Data was null");
             }
