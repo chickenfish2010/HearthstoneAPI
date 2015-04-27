@@ -136,7 +136,6 @@ C:\Users\acancie1\Documents\HearthstoneAPI\StudentWebService\obj\Debug\StudentWe
 C:\Users\acancie1\Documents\HearthstoneAPI\StudentWebService\obj\Debug\StudentWebService.dll
 C:\Users\acancie1\Documents\HearthstoneAPI\StudentWebService\obj\Debug\StudentWebService.pdb
 =======
-<<<<<<< HEAD
 C:\Users\tstone4\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\StudentWebService.dll.config
 C:\Users\tstone4\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\StudentWebService.dll
 C:\Users\tstone4\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\StudentWebService.pdb
@@ -164,7 +163,6 @@ C:\Users\tstone4\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\System.Web.
 C:\Users\tstone4\Desktop\GitHub\HearthstoneAPI\StudentWebService\obj\Debug\StudentWebService.csprojResolveAssemblyReference.cache
 C:\Users\tstone4\Desktop\GitHub\HearthstoneAPI\StudentWebService\obj\Debug\StudentWebService.dll
 C:\Users\tstone4\Desktop\GitHub\HearthstoneAPI\StudentWebService\obj\Debug\StudentWebService.pdb
-=======
 C:\Users\mharris1\Desktop\GitHub\HearthstoneAPI\StudentWebService\obj\Debug\StudentWebService.csprojResolveAssemblyReference.cache
 >>>>>>> origin/master
 >>>>>>> 8802ec7f906e3b8dfef9e5cd9bed61524cb433d9
