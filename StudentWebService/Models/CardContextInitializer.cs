@@ -27,7 +27,7 @@ namespace StudentWebService.Models
             Console.WriteLine(Cards.ToString());
 
             string readText;
-            string path = @"c:\Users\acancie1\Documents\HearthStoneAPI\AllSets.json";
+            string path = @"c:\Users\mharris1\Documents\HearthStoneAPI\AllSets.json";
 
             if (File.Exists(path))
             {
@@ -36,7 +36,7 @@ namespace StudentWebService.Models
                 Console.WriteLine("Parsed File");
             }
 
-            Console.WriteLine(file.ToString());
+            //Console.WriteLine(file.ToString());
 
             // the contents of this if statement were borrowed heavily from:
             //http://www.newtonsoft.com/json/help/html/SerializingJSONFragments.htm

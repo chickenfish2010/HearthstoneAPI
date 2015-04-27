@@ -37,9 +37,9 @@ namespace StudentWebService.Controllers
         {
             Card card = db.Cards.Find(id);
             if (card == null)
-                {
-                    throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
-                }
+            {
+                throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
+            }
             
             return card;
         }

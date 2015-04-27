@@ -50,6 +50,8 @@ function getCard(id) {
         // Display Card with ID 
         console.log(data.Id + ' ' + data.Name + ' ' + data.Gpa);
 
+        // If statement for null return
+
         $('#Card').html(data.Id + ' - ' + data.Name + ' GPA = '
             + data.Gpa);
     })
