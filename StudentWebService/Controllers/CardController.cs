@@ -29,7 +29,7 @@ namespace StudentWebService.Controllers
             else
             {
                 return null;
-            }
+            } 
         }
 
         // GET api/Card/5
@@ -37,9 +37,9 @@ namespace StudentWebService.Controllers
         {
             Card card = db.Cards.Find(id);
             if (card == null)
-                {
-                    throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
-                }
+            {
+                throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.NotFound));
+            }
             
             return card;
         }
@@ -87,7 +87,7 @@ namespace StudentWebService.Controllers
         }
 
         // DELETE api/Card/5
-        public HttpResponseMessage DeleteCard(int id)
+        public HttpResponseMessage DeleteCard(string id)
         {
             Card Card = db.Cards.Find(id);
             if (Card == null)

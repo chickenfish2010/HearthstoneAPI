@@ -6,9 +6,21 @@ function init() {
         getCards();
     });
 
+    $('#updateButton').click(function () {
+        //PUT a single card
+        var Id = $('#updateCardId');
+        //var card = {
+        //    Attack: $('#updateCardAttack').val(),
+        //    Health: $('#updateCardHealth').val(),
+        //    Cost: $('updateCardMana').val()
+        //};
+        //console.log("created name/card");
+        updateCard(Id);
+    });
+     
     $('#getCard').click(function () {
         // GET a single Card
-        var stuId = $('#stuId').val();
+        var cardId = $('#cardId').val();
         getCard(stuId);
     });
 
@@ -18,13 +30,65 @@ function init() {
             Id: $('#newCardId').val(),
             Name: $('#newCardName').val(),
             Attack: $('#newCardAttack').val(),
-            Health: $('#newCardHealth').val()
+            Health: $('#newCardHealth').val(),
+            Cost: $('#newCardMana').val()
         };
 
         saveNewCard(stu);
     });
+
+<<<<<<< HEAD
+    $('#deleteCard').click(function () {
+        var cardId = $('#deleteCardID').val();
+        deleteCard(cardId);
+    })
 }
 
+function deleteCard(cardId)
+    {
+    $.ajax({
+        url: '/api/Card/' + cardId,
+        type: 'DELETE',
+        data: cardId,
+        success: function (result) {
+            console.log("Card removed.");
+
+            // Set some confirmation message
+        },
+        error: function (jqXHR, textStatus, err) {
+            $('#updateStatus').text('Error: ' + err);
+        }
+=======
+    // begin update card stuff (remove if things break)
+    $('#saveUpdatedCard').click(function () {
+        var updatedCard = {
+            Id: $('#updatedCardId').val(),
+            Name: $('#updatedCardName').val(),
+            Attack: $('#updatedCardName').val(),
+            Health: $('#updatedCardName').val()
+        };
+
+        saveUpdatedCard(updatedCard);
+>>>>>>> origin/master
+    });
+}
+
+function updateCard(id)
+{
+    $.ajax({
+        url: '/api/Card/' + id,
+        type: 'PUT',
+        data: id,
+        success: function (result) {
+            console.log("Card updated.");
+
+            // Set some confirmation message
+        },
+        error: function (jqXHR, textStatus, err) {
+            $('#updateStatus').text('Error: ' + err);
+        }
+    });
+}
 
 function saveNewCard(stu) {
     // POST request: Id=3&Name=Becky+Black&Gpa=4.0
@@ -33,7 +97,7 @@ function saveNewCard(stu) {
         type: 'POST',
         data: stu,
         success: function (result) {
-            console.log("Becky added.");
+            console.log("New Card Saved.");
 
             // Set some confirmation message
         },
@@ -44,14 +108,36 @@ function saveNewCard(stu) {
 
 }
 
+function saveUpdatedCard() {
+    $.ajax({
+        url: '/api/Card',
+        type: 'POST',
+        data: updatedCard,
+        success: function (result) {
+            console.log("Saved updated card.");
+
+            // Set some confirmation message
+        },
+        error: function (jqXHR, textStatus, err) {
+            $('#updateStatus').text('Error: ' + err);
+        }
+    });
+}
+
 function getCard(id) {
     $.getJSON('api/Card/' + id)
     .done(function (data) {
         // Display Card with ID 
         console.log(data.Id + ' ' + data.Name + ' ' + data.Gpa);
 
+<<<<<<< HEAD
+        $('#Card').html(data.Id + ' - ' + data.Name + ', Mana Cost - ' + data.Cost +', Attack - ' + data.Attack + ', Health - ' + data.Health);
+=======
+        // If statement for null return
+
         $('#Card').html(data.Id + ' - ' + data.Name + ' GPA = '
             + data.Gpa);
+>>>>>>> origin/master
     })
     .fail(function (jqXHR, textStatus, err) {
         alert('Error: ' + err);
