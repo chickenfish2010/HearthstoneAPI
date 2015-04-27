@@ -132,6 +132,6 @@ C:\Users\mharris1\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\System.Web
 C:\Users\mharris1\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\System.Web.WebPages.xml
 C:\Users\mharris1\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\System.Web.WebPages.Deployment.xml
 C:\Users\mharris1\Desktop\GitHub\HearthstoneAPI\StudentWebService\bin\System.Web.WebPages.Razor.xml
-C:\Users\mharris1\Desktop\GitHub\HearthstoneAPI\StudentWebService\obj\Debug\StudentWebService.csprojResolveAssemblyReference.cache
 C:\Users\mharris1\Desktop\GitHub\HearthstoneAPI\StudentWebService\obj\Debug\StudentWebService.dll
 C:\Users\mharris1\Desktop\GitHub\HearthstoneAPI\StudentWebService\obj\Debug\StudentWebService.pdb
+C:\Users\mharris1\Desktop\GitHub\HearthstoneAPI\StudentWebService\obj\Debug\StudentWebService.csprojResolveAssemblyReference.cache

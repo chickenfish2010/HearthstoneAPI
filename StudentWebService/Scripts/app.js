@@ -8,7 +8,7 @@ function init() {
 
     $('#getCard').click(function () {
         // GET a single Card
-        var stuId = $('#stuId').val();
+        var cardId = $('#cardId').val();
         getCard(stuId);
     });
 
@@ -23,6 +23,18 @@ function init() {
 
         saveNewCard(stu);
     });
+
+    // begin update card stuff (remove if things break)
+    $('#saveUpdatedCard').click(function () {
+        var updatedCard = {
+            Id: $('#updatedCardId').val(),
+            Name: $('#updatedCardName').val(),
+            Attack: $('#updatedCardName').val(),
+            Health: $('#updatedCardName').val()
+        };
+
+        saveUpdatedCard(updatedCard);
+    });
 }
 
 
@@ -33,7 +45,7 @@ function saveNewCard(stu) {
         type: 'POST',
         data: stu,
         success: function (result) {
-            console.log("Becky added.");
+            console.log("New Card Saved.");
 
             // Set some confirmation message
         },
@@ -42,6 +54,22 @@ function saveNewCard(stu) {
         }
     });
 
+}
+
+function saveUpdatedCard() {
+    $.ajax({
+        url: '/api/Card',
+        type: 'POST',
+        data: updatedCard,
+        success: function (result) {
+            console.log("Saved updated card.");
+
+            // Set some confirmation message
+        },
+        error: function (jqXHR, textStatus, err) {
+            $('#updateStatus').text('Error: ' + err);
+        }
+    });
 }
 
 function getCard(id) {
