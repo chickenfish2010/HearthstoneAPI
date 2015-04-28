@@ -1,6 +1,7 @@
 # HearthstoneAPI
 
 URL:  https://github.com/chickenfish2010/HearthstoneAPI
+  Our Final code is not in the master, but in the "Final_Branch"
 
 Web Service Calls:
   GetCards()
