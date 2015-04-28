@@ -3,7 +3,7 @@ using System.IO;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Web;
+using System.Web.Hosting;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 
@@ -15,11 +15,11 @@ namespace StudentWebService.Models
         // Put initial data into the database
         protected override void Seed(CardsContext context)
         {
-            
+            HostingEnvironment.MapPath(@"~/AllSets.json");
             var Cards = new List<Card>{};
 
             string readText;
-            string path = @"c:\Users\acancie1\Documents\HearthStoneAPI\AllSets.json";
+            string path = HostingEnvironment.MapPath(@"~/AllSets.json");
 
             if (File.Exists(path))
             {

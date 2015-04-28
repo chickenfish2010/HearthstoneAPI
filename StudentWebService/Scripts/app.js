@@ -75,7 +75,7 @@ function updateCard(Id, Card)
         data: Card,
         success: function (result) {
             console.log("Card updated.");
-            $('updateStatus').text("Updated Successfully")
+            $('#updateStatus').text("Updated Successfully")
             // Set some confirmation message
         },
         error: function (jqXHR, textStatus, err) {
@@ -94,7 +94,7 @@ function saveNewCard(stu) {
         success: function (result) {
             console.log("New Card Saved.");
 
-            $('saveStatus').text("Saved Successfully")
+            $('#saveStatus').text("Saved Successfully")
             // Set some confirmation message
         },
         error: function (jqXHR, textStatus, err) {

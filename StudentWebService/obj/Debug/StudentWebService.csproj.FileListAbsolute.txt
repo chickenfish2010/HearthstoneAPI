@@ -25,3 +25,5 @@ C:\Users\acancie1\Documents\HearthstoneAPI\StudentWebService\bin\System.Web.WebP
 C:\Users\acancie1\Documents\HearthstoneAPI\StudentWebService\obj\Debug\StudentWebService.csprojResolveAssemblyReference.cache
 C:\Users\acancie1\Documents\HearthstoneAPI\StudentWebService\obj\Debug\StudentWebService.dll
 C:\Users\acancie1\Documents\HearthstoneAPI\StudentWebService\obj\Debug\StudentWebService.pdb
+C:\Users\acancie1\Documents\HearthstoneAPI\StudentWebService\obj\Debug\StudentWebService.csproj.GenerateResource.Cache
+C:\Users\acancie1\Documents\HearthstoneAPI\StudentWebService\obj\Debug\StudentWebService.Properties.Resources.resources
