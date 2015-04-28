@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 
 namespace StudentWebService.Models
 {
-    public class CardsContextInitializer : DropCreateDatabaseAlways<CardsContext>
+    public class CardsContextInitializer : DropCreateDatabaseIfModelChanges<CardsContext>
     {
         private JObject file;
         // Put initial data into the database
@@ -18,11 +18,8 @@ namespace StudentWebService.Models
             
             var Cards = new List<Card>{};
 
-
-            Console.WriteLine(Cards.ToString());
-
             string readText;
-            string path = @"c:\Users\mharris1\Documents\HearthStoneAPI\AllSets.json";
+            string path = @"c:\Users\acancie1\Documents\HearthStoneAPI\AllSets.json";
 
             if (File.Exists(path))
             {
@@ -50,7 +47,6 @@ namespace StudentWebService.Models
                     cardToAdd.Text = (string)card["text"];
                     cardToAdd.Faction = (string)card["faction"];
                     cardToAdd.Rarity = (string)card["rarity"];
-
                     
                     if (card["cost"] != null)
                     {
@@ -69,8 +65,8 @@ namespace StudentWebService.Models
                     {
                         cardToAdd.Attack = 0;
                     }
+
                     cardToAdd.Flavor = (string)card["flavor"];
-                    //cardToAdd.Artist = (string)card["attack"];
 
                     if (card["collectible"] != null)
                     {
@@ -113,18 +109,15 @@ namespace StudentWebService.Models
                     {
                         cardToAdd.Health = 0;
                     }
-                    //cardToAdd.Health = (int)card["health"];
-                    //cardToAdd.Mechanics = (string[])card["mechanics"];
 
                     Cards.Add(cardToAdd);
                 }
+
+                Cards.ForEach(s => context.Cards.Add(s));
+                context.SaveChanges();
             }
 
             
-
-            Cards.ForEach(s => context.Cards.Add(s));
-            context.SaveChanges();
-
 
         }
 

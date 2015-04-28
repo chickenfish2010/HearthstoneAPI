@@ -45,7 +45,7 @@ namespace StudentWebService.Controllers
         }
 
         // PUT api/Card/5
-        public HttpResponseMessage PutCard(int id, Card Card)
+        public HttpResponseMessage PutCard(string id, Card Card)
         {
             if (ModelState.IsValid && id.Equals(Card.Id))
             {

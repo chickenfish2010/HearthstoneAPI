@@ -8,20 +8,23 @@ function init() {
 
     $('#updateButton').click(function () {
         //PUT a single card
-        var Id = $('#updateCardId');
-        //var card = {
-        //    Attack: $('#updateCardAttack').val(),
-        //    Health: $('#updateCardHealth').val(),
-        //    Cost: $('updateCardMana').val()
-        //};
-        //console.log("created name/card");
-        updateCard(Id);
+        var Card = {
+            Id: $('#updateCardId').val(),
+            Name: $('#updateCardName').val(),
+            Attack: $('#updateCardAttack').val(),
+            Health: $('#updateCardHealth').val(),
+            Cost: $('#updateCardMana').val()
+        };
+        
+        var Id = Card.Id;
+        
+        updateCard(Id, Card);
     });
      
     $('#getCard').click(function () {
         // GET a single Card
         var cardId = $('#cardId').val();
-        getCard(stuId);
+        getCard(cardId);
     });
 
     $('#saveNewCard').click(function () {
@@ -52,30 +55,34 @@ function deleteCard(cardId)
         success: function (result) {
             console.log("Card removed.");
 
+            $('#deleteStatus').text("Card Removed Successfully")
             // Set some confirmation message
         },
         error: function (jqXHR, textStatus, err) {
-            $('#updateStatus').text('Error: ' + err);
+            $('#deleteStatus').text('Error: ' + err);
         }
 
     });
 }
 
-function updateCard(id)
+function updateCard(Id, Card)
 {
     $.ajax({
-        url: '/api/Card/' + id,
+        url: '/api/Card/' + Card.Id,
         type: 'PUT',
-        data: id,
+        //dataType: 'json',
+        //contentType: 'application/JSON', 
+        data: Card,
         success: function (result) {
             console.log("Card updated.");
-
+            $('updateStatus').text("Updated Successfully")
             // Set some confirmation message
         },
         error: function (jqXHR, textStatus, err) {
             $('#updateStatus').text('Error: ' + err);
         }
     });
+
 }
 
 function saveNewCard(stu) {
@@ -87,30 +94,31 @@ function saveNewCard(stu) {
         success: function (result) {
             console.log("New Card Saved.");
 
+            $('saveStatus').text("Saved Successfully")
             // Set some confirmation message
         },
         error: function (jqXHR, textStatus, err) {
-            $('#updateStatus').text('Error: ' + err);
+            $('#saveStatus').text('Error: ' + err);
         }
     });
 
 }
 
-function saveUpdatedCard() {
-    $.ajax({
-        url: '/api/Card',
-        type: 'POST',
-        data: updatedCard,
-        success: function (result) {
-            console.log("Saved updated card.");
+//function saveUpdatedCard() {
+//    $.ajax({
+//        url: '/api/Card',
+//        type: 'POST',
+//        data: updatedCard,
+//        success: function (result) {
+//            console.log("Saved updated card.");
 
-            // Set some confirmation message
-        },
-        error: function (jqXHR, textStatus, err) {
-            $('#updateStatus').text('Error: ' + err);
-        }
-    });
-}
+//            // Set some confirmation message
+//        },
+//        error: function (jqXHR, textStatus, err) {
+//            $('#updateStatus').text('Error: ' + err);
+//        }
+//    });
+//}
 
 function getCard(id) {
     $.getJSON('api/Card/' + id)
@@ -130,24 +138,24 @@ function getCard(id) {
 function getCards() {
     var $list = $('#CardList');
 
-    $('#CardList').html("");
+    $('#CardList').html("Searching the Database...");
 
     $.getJSON('api/Card')
     .done(function (data) {
-        // On success, 'data' contains a list of Cards
-        $.each(data, function (key, item) {
-            // Display each Card
-            if (data != null) {
-                //console.log(item.Id + ' ' + item.Name + ' ' + item.Gpa);
+        $('#CardList').html("");
+        if (data != null) {
+            // On success, 'data' contains a list of Cards
+            $.each(data, function (key, item) {
+                // Display each Card
+                var tempString = "";
                 var string = '<li>' + item.Id + ' - <b>' + item.Name + ' - ' + (item.Cost || '');
 
-                if (item.Cost != null)
-                {
+                if (item.Cost != null) {
                     tempString = ', ' + 'Mana Cost - ' + item.Cost;
                 }
                 string += tempString;
                 if (item.Attack != null) {
-                    tempString =', ' + 'Attack - ' + item.Attack;
+                    tempString = ', ' + 'Attack - ' + item.Attack;
                 }
                 string += tempString;
                 if (item.Health != null) {
@@ -158,10 +166,12 @@ function getCards() {
                 console.log(string);
                 $(string).appendTo($list);
                 //$('<li>' + item.Id + ' - ' + item.Name + ', Mana Cost - ' + item.Cost + ', Attack - ' + item.Attack + ', Health - ' + item.Health + '</li>').appendTo($list);
-            } else {
-                console.log("Data was null");
-            }
-        });
+
+            });
+        }
+        else {
+            $('#CardList').html("No Entries Found.");
+        }
     })
     .fail(function (jqXHR, textStatus, err) {
         alert('Error: ' + err);
