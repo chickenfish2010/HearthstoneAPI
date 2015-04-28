@@ -104,27 +104,11 @@ function saveNewCard(stu) {
 
 }
 
-//function saveUpdatedCard() {
-//    $.ajax({
-//        url: '/api/Card',
-//        type: 'POST',
-//        data: updatedCard,
-//        success: function (result) {
-//            console.log("Saved updated card.");
-
-//            // Set some confirmation message
-//        },
-//        error: function (jqXHR, textStatus, err) {
-//            $('#updateStatus').text('Error: ' + err);
-//        }
-//    });
-//}
 
 function getCard(id) {
     $.getJSON('api/Card/' + id)
     .done(function (data) {
         // Display Card with ID 
-        console.log(data.Id + ' ' + data.Name + ' ' + data.Gpa);
 
         $('#Card').html(data.Id + ' - ' + data.Name + ', Mana Cost - ' + data.Cost +', Attack - ' + data.Attack + ', Health - ' + data.Health);
 
